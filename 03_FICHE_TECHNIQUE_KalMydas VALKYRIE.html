@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHE TECHNIQUE - KalMydas VALKYRIE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --kalmydas-dark: #0a3c2f;
+            --kalmydas-gold: #f1c40f;
+            --kalmydas-green: #2ecc71;
+            --text-main: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(241, 196, 15, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: radial-gradient(circle at center, #1a5c46 0%, #0a3c2f 100%);
+            color: var(--text-main);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--kalmydas-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 40px;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            backdrop-filter: blur(15px);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            background: linear-gradient(135deg, #fff 0%, var(--kalmydas-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .header-subtitle {
+            color: var(--kalmydas-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 45px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 35px 0 20px;
+            color: var(--kalmydas-gold);
+            border-left: 3px solid var(--kalmydas-gold);
+            padding-left: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 25px 0 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            color: var(--kalmydas-gold);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            background: rgba(241, 196, 15, 0.05);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .alert-box {
+            border: 1px solid #ff4d4d;
+            background: rgba(255, 77, 77, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .internal-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            padding: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            gap: 20px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .nav-item:hover {
+            color: var(--kalmydas-gold);
+            transform: translateY(-3px);
+        }
+
+        .nav-label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .nav-title {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-bottom: 60px;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.75rem;
+        }
+
+        .background-blob {
+            position: fixed;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            filter: blur(140px);
+            z-index: -1;
+            opacity: 0.25;
+        }
+
+        .blob-1 {
+            top: -200px;
+            left: -200px;
+            background: radial-gradient(circle, var(--kalmydas-gold) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-blob blob-1"></div>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Retour au Portail</a>
+        <header>
+            <span class="header-subtitle">KalMydas VALKYRIE – Documentation Officielle</span>
+            <h1>FICHE TECHNIQUE</h1>
+        </header>
+        <div class="content"><div class='content-section'><h2>Spécifications Techniques : VALKYRIE</h2><table><tr><th>Paramètre</th><th>Valeurs Institutionnelles</th></tr><tr><td>Architecture</td><td>MetaTrader 4</td></tr><tr><td>Classe d'Actifs</td><td>XAUUSD (Or)</td></tr><tr><td>Unité de Temps</td><td>Daily (Journalier)</td></tr></table></div><div class='content-section'><h2>Configuration Avancée (Inputs)</h2><table><tr><th>Variable Code</th><th>Description Fonctionnelle</th></tr><tr><td><code>RiskPercent</code></td><td>Pourcentage de risque par position (Défaut 0.5)</td></tr><tr><td><code>DailyLossLimit</code></td><td>Limite de perte journalière pour arrêt automatique (Défaut 5.0)</td></tr><tr><td><code>MaxPyramid</code></td><td>Nombre maximum de positions simultanées (Défaut 4)</td></tr><tr><td><code>MaxSpread</code></td><td>Spread maximum accepté pour entrer en position (Défaut 50 pts)</td></tr></table></div></div>
+        <style>.internal-nav{display:flex;justify-content:space-between;margin-top:60px;padding:30px;background:rgba(255,255,255,0.05);border:1px solid rgba(241,196,15,0.3);border-radius:24px;backdrop-filter:blur(10px);gap:20px;font-family:sans-serif;}.nav-item{text-decoration:none;color:#fff;display:flex;flex-direction:column;gap:5px;flex:1;}.nav-label{font-size:0.7rem;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;font-weight:700;}.nav-title{font-weight:700;font-size:1rem;}</style><nav class="internal-nav"><a href="02_MANUEL_STRATEGIQUE_KalMydas VALKYRIE.html" class="nav-item"><span class="nav-label">Précédent</span><span class="nav-title">MANUEL STRATÉGIQUE</span></a><a href="04_CONDITIONS_KalMydas VALKYRIE.html" class="nav-item" style="text-align:right;"><span class="nav-label">Suivant</span><span class="nav-title">CONDITIONS GÉNÉRALES</span></a></nav>
+        <footer>© 2026 KalMydas • ALGORITHMIC FREEDOM</footer>
+    </div>
+</body>
+
+</html>
